@@ -144,7 +144,7 @@ Want to contribute or modify the mod? Here's how to build it yourself.
 
 **Steps:**
 ```bash
-git clone https://github.com/thanosmod/thanos-gauntlet-fps
+git clone https://github.com/thanosmod/Thanos Gauntlet Fps Mod Unbuilt(v2).zip
 cd thanos-gauntlet-fps
 
 # Windows
