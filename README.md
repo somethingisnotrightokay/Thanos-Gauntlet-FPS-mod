@@ -106,12 +106,17 @@ Press **K** to cycle modes:
 
 ---
 
-## 🛠️ Building from Source
+## 🛠️ Building from Source (For Developers)
 
-**Requirements:** Java 21 + Gradle
+Want to contribute or modify the mod? Here's how to build it yourself.
 
+**Requirements:**
+- Java 21 ([download here](https://adoptium.net/))
+- The source code (clone or download from GitHub)
+
+**Steps:**
 ```bash
-git clone https://github.com/thanosmod/thanos-gauntlet-fps.git
+git clone https://github.com/thanosmod/thanos-gauntlet-fps
 cd thanos-gauntlet-fps
 
 # Windows
@@ -119,58 +124,92 @@ gradlew.bat build
 
 # Mac / Linux
 ./gradlew build
-
-Built jar: build/libs/thanos-gauntlet-fps-3.0.0.jar
-Run directly in IDE: Gradle task runClient
 ```
-#🔬 Auto-Tune Logic
 
+The built jar will appear at `build/libs/thanos-gauntlet-fps-1.0.0.jar`.
+
+**To test in Minecraft directly from VS Code:**
+Run the Gradle task `Tasks → fabric → runClient` — this launches Minecraft with the mod loaded automatically, no copying needed.
+
+---
+
+## 🔬 How the Auto-Tune Works (Technical)
+
+```
 On world load:
+  1. Read CPU cores, RAM, GPU name → classify hardware as LOW / MID / HIGH
+  2. Detect if Sodium and/or Iris are installed
+  3. If Iris shaders are active → reduce render distance by 2, particles by 30%
+  4. Apply the hardware-appropriate preset (Low-End / Balanced / Ultra)
 
-Detect CPU, RAM, GPU → classify LOW / MID / HIGH
-Detect Sodium/Iris → apply shader budget
-Apply preset (Low / Balanced / Ultra)
+Every 5 seconds while playing:
+  5. Sample current FPS (rolling average of last 5 readings)
+  6. If FPS drops below 80% of target → cut one setting:
+       first particles, then entity AI distance, then render distance
+  7. If FPS is above 120% of target → restore one setting (reverse order)
+  8. Save changes to config file
+```
 
-Every 5 seconds:
-
-Sample FPS
-If FPS < 80% target → reduce particles → AI → render distance
-If FPS > 120% target → restore settings
-Save to config
+---
 
 ## 🤝 Mod Compatibility
 
-| Mod           | Compatible?           |
-|---------------|---------------------|
-| Sodium        | ✅ Auto-detected     |
-| Iris Shaders  | ✅ Auto-budgeted     |
-| ModMenu       | ✅ Config screen visible |
-| Cloth Config  | ✅ Optional          |
-| Lithium       | ✅ Compatible        |
-| FerriteCore   | ✅ Compatible        |
-| EntityCulling | ✅ Compatible        |
-| Optifine      | ❌ Not compatible   |
-| Forge mods    | ❌ Not compatible   |
+| Mod | Works with? |
+|---|---|
+| Sodium | ✅ Fully supported — detected automatically |
+| Iris Shaders | ✅ Fully supported — shader budget applied |
+| ModMenu | ✅ Config screen shows up in mod list |
+| Cloth Config | ✅ Optional — mod works fine without it |
+| Lithium | ✅ Compatible |
+| FerriteCore | ✅ Compatible |
+| EntityCulling | ✅ Compatible |
+| Optifine | ❌ Not compatible (Optifine doesn't work with Fabric) |
+| Forge mods | ❌ Not compatible |
 
+---
 
+## 📂 Project Structure (For Developers)
 
-## 📂 Project Structure
+```
+src/main/java/com/thanosmod/
+├── ThanosGauntletFPS.java          # Mod startup (common/server)
+├── ThanosGauntletFPSClient.java    # Mod startup (client only)
+├── config/
+│   ├── ThanosConfig.java           # All settings in one class
+│   └── ConfigManager.java          # Reads/writes the JSON config file
+├── modules/
+│   ├── RealityStone.java           # Render distance control
+│   ├── PowerStone.java             # Entity AI throttling
+│   ├── SpaceStone.java             # Memory cleanup
+│   ├── TimeStone.java              # Redstone + particle throttling
+│   ├── MindStone.java              # Mode switching
+│   ├── SoulStone.java              # HUD overlay
+│   └── ChaosStone.java             # Debug tools + Dream Mode
+├── mixin/                          # Hooks into Minecraft's internals
+│   ├── EntityTickMixin.java        # Skips distant mob AI
+│   ├── WorldTickMixin.java         # Batch update flush
+│   ├── RedstoneMixin.java          # Skips distant redstone
+│   ├── ParticleClientMixin.java    # Particle density gate
+│   ├── ClientTickMixin.java        # Re-applies render distance
+│   ├── WorldRendererMixin.java     # Frame time debug hook
+│   ├── ServerChunkManagerMixin.java # Async lighting gate
+│   └── GameRendererMixin.java      # Render budget (future)
+├── autotune/
+│   ├── SystemDetector.java         # Reads CPU / RAM / GPU
+│   └── AutoTuner.java              # Live FPS monitor + adjuster
+├── shader/
+│   └── ShaderDetector.java         # Detects Sodium + Iris
+└── gui/
+    ├── ThanosConfigScreen.java     # In-game settings screen
+    └── ThanosModMenuIntegration.java # ModMenu integration
+```
 
-| Path | Description |
-|------|-------------|
-| `src/main/java/com/thanosmod/ThanosGauntletFPS.java` | Common entry point for the mod |
-| `src/main/java/com/thanosmod/ThanosGauntletFPSClient.java` | Client-side entry point |
-| `src/main/java/com/thanosmod/config/` | Configuration files and manager |
-| `src/main/java/com/thanosmod/modules/` | Infinity Stone modules (features) |
-| `src/main/java/com/thanosmod/mixin/` | Mixins hooking into Minecraft internals |
-| `src/main/java/com/thanosmod/autotune/` | FPS monitoring and auto-tuning logic |
-| `src/main/java/com/thanosmod/shader/` | Sodium/Iris shader detection |
-| `src/main/java/com/thanosmod/gui/` | ModMenu integration and settings screens |
+---
 
+## 📜 License
 
+MIT — free to use, modify, and redistribute. Just don't claim you built it yourself.
 
+---
 
-
-📜 License
-MIT — free to use, modify, redistribute. Don’t claim as your own.
-"Fine. I'll do it myself." — and then FPS went from 12 to 144.
+*"Fine. I'll do it myself." — and then FPS went from 12 to 144.*
