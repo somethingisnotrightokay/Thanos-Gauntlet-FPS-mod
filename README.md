@@ -1,5 +1,5 @@
-# 🟣 Thanos Gauntlet FPS v3
-### *Six Stones. One Snap. Infinite FPS.*
+# 🟣 Reality Gauntlet v1  
+### *Six Crystals. One Engine. Infinite FPS.*
 
 [![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-brightgreen)](https://minecraft.net/)
 [![Fabric Loader](https://img.shields.io/badge/Fabric%20Loader-0.15.11+-blue)](https://fabricmc.net/)
@@ -7,14 +7,16 @@
 [![Modrinth](https://img.shields.io/badge/Modrinth-Available-green)](https://modrinth.com/mod/thanos-gauntlet-fps)
 [![GitHub](https://img.shields.io/badge/GitHub-Source-black)](https://github.com/thanosmod/thanos-gauntlet-fps)
 
-> *The ultimate Fabric performance optimizer. Fully audited and bug-fixed. Auto-tunes FPS, entities, chunks, redstone, and shaders. Works alongside Sodium + Iris for the smoothest Minecraft experience.*
+> *A Fabric performance optimizer. Auto‑tunes FPS, entities, chunks, redstone, and shaders. Works seamlessly with Sodium + Iris for the smoothest Minecraft experience.*
 
 ---
 
 ## 🎮 What Does This Mod Do?
 
-If Minecraft runs slowly, this mod fixes it automatically.  
-It reads your CPU, RAM, and GPU, applies optimal settings, monitors FPS live, and adjusts things in real-time — no restarts needed. Think of it as a smart assistant keeping Minecraft smooth without you lifting a finger.
+If Minecraft stutters, **Reality Gauntlet fixes it automatically**.  
+It reads your CPU, RAM, and GPU, applies optimal settings, monitors FPS live, and adjusts everything in real time — no restarts required.
+
+It’s like having a smart performance engineer running in the background, keeping your game smooth.
 
 ---
 
@@ -31,33 +33,33 @@ It reads your CPU, RAM, and GPU, applies optimal settings, monitors FPS live, an
 
 ---
 
-## ⬡ The Six Infinity Stones (Features)
+## ⬡ The Six Performance Crystals (Features)
 
-| Stone | Feature |
-|-------|---------|
-| 🔴 Reality Stone | Auto-adjusts render distance based on hardware and FPS |
-| 🟣 Power Stone | Skips AI updates for distant mobs to improve performance |
-| 🔵 Space Stone | Cleans memory dynamically to prevent slowdowns |
-| 🟢 Time Stone | Skips faraway redstone and particles |
-| 🟡 Mind Stone | Auto-tunes settings live based on FPS and hardware |
-| 🟠 Soul Stone | HUD overlay with FPS and drop warnings |
-| ⚪ Chaos Stone | Optional debug tools and “Dream Mode” for max FPS |
+| Crystal | Feature |
+|--------|---------|
+| 🔴 **Chrono Crystal** | Auto-adjusts render distance based on hardware + FPS |
+| 🟣 **Void Crystal** | Skips AI updates for distant mobs |
+| 🔵 **Core Crystal** | Dynamic memory cleanup to prevent slowdowns |
+| 🟢 **Aether Crystal** | Skips faraway redstone + particles |
+| 🟡 **Flux Crystal** | Live auto-tuning based on FPS + hardware |
+| 🟠 **Prisma Crystal** | HUD overlay with FPS + drop warnings |
+| ⚪ **Echo Crystal** | Optional debug tools + “Max FPS Mode” |
 
 ---
 
 ## 🚀 Installation
 
-**Required:**
-1. Install [Fabric Loader 0.15.11+](https://fabricmc.net/use/installer/) for MC 1.21.1
-2. Place [Fabric API](https://modrinth.com/mod/fabric-api) in your `mods` folder
-3. Place `thanos-gauntlet-fps-3.0.0.jar` in `mods`
+**Required:**  
+1. Install **Fabric Loader 0.15.11 or higher**  
+2. Add **Fabric API** to your `mods` folder  
+3. Place `reality-gauntlet-3.0.0.jar` in `mods`  
 4. Launch Minecraft with the Fabric profile
 
-**Optional:**
-- [Sodium](https://modrinth.com/mod/sodium) — faster rendering  
-- [Iris](https://modrinth.com/mod/iris) — shader support  
-- [Cloth Config](https://modrinth.com/mod/cloth-config) — in-game settings GUI  
-- [ModMenu](https://modrinth.com/mod/modmenu) — access settings via Mods menu
+**Optional:**  
+- Sodium — faster rendering  
+- Iris — shader support  
+- Cloth Config — in‑game settings GUI  
+- ModMenu — access settings via Mods menu  
 
 > Mods folder: `%appdata%\.minecraft\mods`
 
@@ -65,21 +67,21 @@ It reads your CPU, RAM, and GPU, applies optimal settings, monitors FPS live, an
 
 ## ⚙️ Settings & Configuration
 
-**In-game GUI (recommended)**: ModMenu + Cloth Config: sliders & toggles for each Stone.  
+**In‑game GUI:**  
+ModMenu + Cloth Config → sliders & toggles for each Crystal.
 
 **Manual config file:**  
-
-.minecraft/config/thanos-gauntlet-fps.json
+```
+.minecraft/config/reality-gauntlet.json
+```
 
 ---
 
 ## 🎮 Performance Modes
 
-Press **K** to cycle modes:
-
 | Mode | Best for | Effect |
-|------|----------|-------|
-| 🔴 Low-End | Old/slow PCs | Render 6, particles 30%, AI stops >16 blocks |
+|------|----------|--------|
+| 🔴 Low-End | Older/slower PCs | Render 6, particles 30%, AI stops >16 blocks |
 | 🟡 Balanced | Most PCs | Render 10, particles 70%, AI stops >32 blocks |
 | 🟢 Ultra | High-end PCs | Render 16, full particles, minimal restrictions |
 | ⚙️ Custom | Power users | Manual control of all settings |
@@ -92,7 +94,7 @@ Press **K** to cycle modes:
 
 **Optifine compatible?** ❌ No — use Sodium + Iris  
 **Redstone farms affected?** ❌ Only distant redstone skipped  
-**Server compatibility?** ✅ Client works anywhere; server optimizations active on any server  
+**Server compatibility?** ✅ Client works anywhere; server optimizations apply everywhere  
 **Sources jar needed?** ❌ Only for developers
 
 ---
@@ -100,24 +102,22 @@ Press **K** to cycle modes:
 ## 📦 Files
 
 | File | Purpose |
-|------|--------|
-| `thanos-gauntlet-fps-3.0.0.jar` | Main mod — everyone |
-| `thanos-gauntlet-fps-3.0.0-sources.jar` | Source code — developers only |
+|------|---------|
+| `reality-gauntlet-3.0.0.jar` | Main mod |
+| `reality-gauntlet-3.0.0-sources.jar` | Source code for developers |
 
 ---
 
 ## 🛠️ Building from Source (For Developers)
 
-Want to contribute or modify the mod? Here's how to build it yourself.
-
-**Requirements:**
-- Java 21 ([download here](https://adoptium.net/))
-- The source code (clone or download from GitHub)
+**Requirements:**  
+- Java 21  
+- Source code from GitHub
 
 **Steps:**
 ```bash
-git clone https://github.com/thanosmod/thanos-gauntlet-fps
-cd thanos-gauntlet-fps
+git clone https://github.com/realitymod/reality-gauntlet
+cd reality-gauntlet
 
 # Windows
 gradlew.bat build
@@ -126,28 +126,32 @@ gradlew.bat build
 ./gradlew build
 ```
 
-The built jar will appear at `build/libs/thanos-gauntlet-fps-1.0.0.jar`.
+The built jar appears in:
+```
+build/libs/reality-gauntlet-1.0.0.jar
+```
 
-**To test in Minecraft directly from VS Code:**
-Run the Gradle task `Tasks → fabric → runClient` — this launches Minecraft with the mod loaded automatically, no copying needed.
+**To test in Minecraft from VS Code:**  
+Run the Gradle task:  
+`Tasks → fabric → runClient`
 
 ---
 
-## 🔬 How the Auto-Tune Works (Technical)
+## 🔬 How the Auto‑Tune Works (Technical)
 
 ```
 On world load:
-  1. Read CPU cores, RAM, GPU name → classify hardware as LOW / MID / HIGH
-  2. Detect if Sodium and/or Iris are installed
-  3. If Iris shaders are active → reduce render distance by 2, particles by 30%
-  4. Apply the hardware-appropriate preset (Low-End / Balanced / Ultra)
+  1. Read CPU cores, RAM, GPU → classify hardware (LOW / MID / HIGH)
+  2. Detect Sodium / Iris
+  3. If shaders active → reduce render distance + particles
+  4. Apply hardware preset (Low-End / Balanced / Ultra)
 
-Every 5 seconds while playing:
-  5. Sample current FPS (rolling average of last 5 readings)
-  6. If FPS drops below 80% of target → cut one setting:
-       first particles, then entity AI distance, then render distance
-  7. If FPS is above 120% of target → restore one setting (reverse order)
-  8. Save changes to config file
+Every 5 seconds:
+  5. Sample FPS (rolling average)
+  6. If FPS < 80% target → reduce settings:
+       particles → AI distance → render distance
+  7. If FPS > 120% target → restore settings (reverse order)
+  8. Save changes to config
 ```
 
 ---
@@ -155,15 +159,15 @@ Every 5 seconds while playing:
 ## 🤝 Mod Compatibility
 
 | Mod | Works with? |
-|---|---|
-| Sodium | ✅ Fully supported — detected automatically |
-| Iris Shaders | ✅ Fully supported — shader budget applied |
-| ModMenu | ✅ Config screen shows up in mod list |
-| Cloth Config | ✅ Optional — mod works fine without it |
+|-----|-------------|
+| Sodium | ✅ Fully supported |
+| Iris Shaders | ✅ Shader-aware tuning |
+| ModMenu | ✅ Config screen |
+| Cloth Config | ✅ Optional |
 | Lithium | ✅ Compatible |
 | FerriteCore | ✅ Compatible |
 | EntityCulling | ✅ Compatible |
-| Optifine | ❌ Not compatible (Optifine doesn't work with Fabric) |
+| Optifine | ❌ Not compatible |
 | Forge mods | ❌ Not compatible |
 
 ---
@@ -171,45 +175,45 @@ Every 5 seconds while playing:
 ## 📂 Project Structure (For Developers)
 
 ```
-src/main/java/com/thanosmod/
-├── ThanosGauntletFPS.java          # Mod startup (common/server)
-├── ThanosGauntletFPSClient.java    # Mod startup (client only)
+src/main/java/com/realitymod/
+├── RealityGauntlet.java              # Mod startup (common/server)
+├── RealityGauntletClient.java        # Mod startup (client only)
 ├── config/
-│   ├── ThanosConfig.java           # All settings in one class
-│   └── ConfigManager.java          # Reads/writes the JSON config file
+│   ├── GauntletConfig.java           # All settings
+│   └── ConfigManager.java            # JSON config read/write
 ├── modules/
-│   ├── RealityStone.java           # Render distance control
-│   ├── PowerStone.java             # Entity AI throttling
-│   ├── SpaceStone.java             # Memory cleanup
-│   ├── TimeStone.java              # Redstone + particle throttling
-│   ├── MindStone.java              # Mode switching
-│   ├── SoulStone.java              # HUD overlay
-│   └── ChaosStone.java             # Debug tools + Dream Mode
-├── mixin/                          # Hooks into Minecraft's internals
-│   ├── EntityTickMixin.java        # Skips distant mob AI
-│   ├── WorldTickMixin.java         # Batch update flush
-│   ├── RedstoneMixin.java          # Skips distant redstone
-│   ├── ParticleClientMixin.java    # Particle density gate
-│   ├── ClientTickMixin.java        # Re-applies render distance
-│   ├── WorldRendererMixin.java     # Frame time debug hook
-│   ├── ServerChunkManagerMixin.java # Async lighting gate
-│   └── GameRendererMixin.java      # Render budget (future)
+│   ├── ChronoCrystal.java            # Render distance control
+│   ├── VoidCrystal.java              # Entity AI throttling
+│   ├── CoreCrystal.java              # Memory cleanup
+│   ├── AetherCrystal.java            # Redstone + particle throttling
+│   ├── FluxCrystal.java              # Mode switching
+│   ├── PrismaCrystal.java            # HUD overlay
+│   └── EchoCrystal.java              # Debug tools + Max FPS Mode
+├── mixin/
+│   ├── EntityTickMixin.java
+│   ├── WorldTickMixin.java
+│   ├── RedstoneMixin.java
+│   ├── ParticleClientMixin.java
+│   ├── ClientTickMixin.java
+│   ├── WorldRendererMixin.java
+│   ├── ServerChunkManagerMixin.java
+│   └── GameRendererMixin.java
 ├── autotune/
-│   ├── SystemDetector.java         # Reads CPU / RAM / GPU
-│   └── AutoTuner.java              # Live FPS monitor + adjuster
+│   ├── SystemDetector.java
+│   └── AutoTuner.java
 ├── shader/
-│   └── ShaderDetector.java         # Detects Sodium + Iris
+│   └── ShaderDetector.java
 └── gui/
-    ├── ThanosConfigScreen.java     # In-game settings screen
-    └── ThanosModMenuIntegration.java # ModMenu integration
+    ├── GauntletConfigScreen.java
+    └── GauntletModMenuIntegration.java
 ```
 
 ---
 
 ## 📜 License
 
-MIT — free to use, modify, and redistribute. Just don't claim you built it yourself.
+MIT — free to use, modify, and redistribute.
 
 ---
 
-*"Fine. I'll do it myself." — and then FPS went from 12 to 144.*
+*"Optimize the world you play in — effortlessly."*
