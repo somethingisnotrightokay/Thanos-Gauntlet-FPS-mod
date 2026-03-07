@@ -103,8 +103,8 @@ ModMenu + Cloth Config → sliders & toggles for each Crystal.
 
 | File | Purpose |
 |------|---------|
-| `reality-gauntlet-3.0.0.jar` | Main mod |
-| `reality-gauntlet-3.0.0-sources.jar` | Source code for developers |
+| `reality-gauntlet-1.0.1.jar` | Main mod |
+| `reality-gauntlet-1.0.1-sources.jar` | Source code for developers |
 
 ---
 
