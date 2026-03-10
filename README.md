@@ -1,9 +1,10 @@
-# 🟣 Reality Gauntlet v2
+# 🟣 Reality Gauntlet v3.0.0
 ### *Seven Crystals. One Engine. Infinite FPS.*
 
 [![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-brightgreen)](https://minecraft.net/)
 [![Fabric Loader](https://img.shields.io/badge/Fabric%20Loader-0.16.9+-blue)](https://fabricmc.net/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-1bd96a?logo=modrinth)](https://modrinth.com/mod/reality-gauntlet-fps)
 
 > *A Fabric performance optimizer for Minecraft 1.21.1. Auto-tunes FPS, entities, chunks, redstone, particles, and shaders. Designed to work seamlessly alongside Sodium and Iris.*
 
